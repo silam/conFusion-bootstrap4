@@ -73,14 +73,19 @@
                                 </div>
                             </div>
                             <div class="form-row">
-                                <button type="button" class="btn btn-secondary btn-sm ml-auto" data-dismiss="modal">Cancel</button>
+                                <button type="button" class="btn btn-secondary btn-sm ml-auto" data-dismiss="modal">
+                                    Cancel
+                                </button>
                                 <button type="submit" class="btn btn-primary btn-sm ml-1">Sign in</button>        
                             </div>
                         </form>
                     </div>
                 </div>
             </div>
-        </div>
+    </div>
+
+
+
     <header class="jumbotron">
         <div class="container">
             <div class="row row-header">
@@ -93,12 +98,22 @@
 
                  </div>
 
+                 <!-- remove tool tip -->
                  <div class="col-12 col-sm-3 align-self-center">
-                        <a href="#reserve"   data-toggle="tooltip" data-html="true"  title="Or Call us at <br><strong>800-987-2323</strong>"
-                            data-placement="bottom">
+                        <a data-toggle="modal" data-target="#reserveModal"  
+                        >
+
+                        <!-- data-toggle="tooltip" data-html="true"  title="Or Call us at <br><strong>800-987-2323</strong>"
+                            data-placement="bottom" -->
+                            <span class="fa">
+
+                            </span>
                             <button type="button" class="btn btn-warning btn-sm btn-block">
-                                Reserve Table
+                                Reserve a Table
                             </button>
+
+                            
+
                         </a>
 
                  </div>
@@ -261,9 +276,173 @@
         </div>
     </div>
 
+    <div id="reserveModal" class="modal fade" role="dialog">
+        <div class="modal-dialog modal-lg" role="content">
+            <div class="modal-content">
+                    <div class="modal-header">
+                            <h4 class="modal-title">Reserve Table </h4>
+                            <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    </div>
+                    <div class="modal-body">
+                            <form>
+                                    <div class="form-group row">
+                                            <label for="NumOfGuests" 
+                                                class="col-md-2 col-form-label">
+                                                Number of Guests
+                                            </label>
+                                            <div class="radio-inline col-md-10" id="numguests">
+                                                    <label class="mr-3"><input type="radio" name="optradio"> 1</label>
+                                                    <label class="mr-3"><input type="radio" name="optradio"> 2</label>
+                                                    <label class="mr-3"><input type="radio" name="optradio"> 3</label>
+                                                    <label class="mr-3"><input type="radio" name="optradio"> 4</label>
+                                                    <label class="mr-3"><input type="radio" name="optradio"> 5</label>
+                                                    <label class="mr-3"><input type="radio" name="optradio"> 6</label>
+                                            </div>
+                   
+                   
+                                    </div>
+
+                                    <div class="form-group row">
+                                            <label for="smoking" class="col-12 col-md-2 col-form-label">Section</label>
+                                            <div class="col-12 col-md-10">
+                                                <div class="btn-group btn-group-toggle" data-toggle="buttons">
+                                                    <label class="btn btn-success active">
+                                                        <input type="radio" name="options" id="option1" autocomplete="off" checked> Non-Smoking
+                                                    </label>
+                                                    <label class="btn btn-danger">
+                                                        <input type="radio" name="options" id="option2" autocomplete="off"> Smoking
+                                                    </label>
+                                                </div>
+                                            </div>
+                                            
+                                    </div>
+
+                                    <div class="form-group row">
+                                            <label for="telnum" 
+                                                class="col-12 col-md-2 col-form-label">
+                                                Date and Time 
+                                            </label>
+                                            <div class="col-6 col-md-3">
+                                                <input type="text" class="form-control"
+                                                    id="date" name="date" 
+                                                    placeholder="Date">
+                                            </div>
+                                            <div class="col-6 col-md-3">
+                                                    <input type="text" class="form-control"
+                                                        id="time" name="time" 
+                                                        placeholder="Time">
+                                            </div>
+                                            <div class="col-6 col-md-4">
+                                                   
+                                           </div>
+                                    </div>
+
+                                    <div class="form-group row">
+                                            <div class="offset-md-2 col-md-10">
+                                                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+                                                    <button type="submit" class="btn btn-primary">Reserve</button>
+                                            </div>
+                                    </div>
 
 
-    <div class="row row-content" id="reserve">
+
+                            </form>
+                    </div>
+
+
+            </div>
+        </div>
+    </div>
+
+    <!-- <div class="row row-content" id="reserve">
+        
+            <div class="col-12 offset-sm-2  col-sm-8 d-flex justify-content-center" >
+                <div class="card">
+                       <h3 class="card-header bg-warning text-white">
+                               Reserve a Table
+                       </h3>
+                       <div class="card-body">
+                           <form >    
+   
+   
+                    <div class="form-group row">
+                            <label for="NumOfGuests" 
+                                class="col-md-2 col-form-label">
+                                Number of Guests
+                            </label>
+                            <div class="custom-control custom-radio custom-control-inline">
+                                   <input type="radio" class="custom-control-input" id="defaultInline1" name="inlineDefaultRadiosExample">
+                                   <label class="custom-control-label" for="defaultInline1">1</label>
+                                 </div>
+                           <div class="custom-control custom-radio custom-control-inline">
+                                       <input type="radio" class="custom-control-input" id="defaultInline2" name="inlineDefaultRadiosExample">
+                                       <label class="custom-control-label" for="defaultInline2">2</label>
+                           </div>
+                           
+                           <div class="custom-control custom-radio custom-control-inline">
+                                   <input type="radio" class="custom-control-input" id="defaultInline3" name="inlineDefaultRadiosExample">
+                                   <label class="custom-control-label" for="defaultInline3">3</label>
+                           </div>
+                           
+                           <div class="custom-control custom-radio custom-control-inline">
+                                   <input type="radio" class="custom-control-input" id="defaultInline4" name="inlineDefaultRadiosExample">
+                                   <label class="custom-control-label" for="defaultInline4">4</label>
+                           </div>
+   
+                           <div class="custom-control custom-radio custom-control-inline">
+                                   <input type="radio" class="custom-control-input" id="defaultInline5" name="inlineDefaultRadiosExample">
+                                   <label class="custom-control-label" for="defaultInline3">5</label>
+                           </div>
+   
+                           <div class="custom-control custom-radio custom-control-inline">
+                                   <input type="radio" class="custom-control-input" id="defaultInline6" name="inlineDefaultRadiosExample">
+                                   <label class="custom-control-label" for="defaultInline6">6</label>
+                           </div>
+   
+   
+                    </div>
+   
+   
+                    
+                    <div class="form-group row">
+                                <label for="telnum" 
+                                    class="col-12 col-md-2 col-form-label">
+                                    Date and Time 
+                                </label>
+                                <div class="col-6 col-md-3">
+                                    <input type="text" class="form-control"
+                                        id="date" name="date" 
+                                        placeholder="Date">
+                                </div>
+                                <div class="col-6 col-md-3">
+                                        <input type="text" class="form-control"
+                                            id="time" name="time" 
+                                            placeholder="Time">
+                                </div>
+                                <div class="col-6 col-md-4">
+                                       
+                               </div>
+                    </div>
+                   
+                    
+                    
+                    <div class="form-group row">
+                        <div class="offset-md-2 col-md-10">
+                                <button type="Submit" class="btn btn-primary">
+                                        Reserve
+                                </button>
+                        </div>
+                    </div>
+   
+   
+   
+                </form>
+                </div>
+               </div>
+            </div> -->
+   
+
+    <!-- <div class="row row-content" id="reserve">
         
          <div class="col-12 offset-sm-2  col-sm-8 d-flex justify-content-center" >
              <div class="card">
@@ -348,7 +527,7 @@
              </form>
              </div>
             </div>
-         </div>
+         </div> -->
 
          
           <div class="col-12 col-md">
@@ -405,12 +584,13 @@
     <script src="node_modules/popper.js/dist/umd/popper.min.js"></script>
     <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
 
-    <script>
+    <!-- Remove tool tip -->
+    <!-- <script>
         $(document).ready(function(){
                 $('[data-toggle="tooltip"]').tooltip();
 
         });
-    </script>
+    </script> -->
 
 
 
